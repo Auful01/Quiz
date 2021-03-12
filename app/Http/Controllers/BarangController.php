@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Barang;
+
 use Illuminate\Http\Request;
+use App\Models\Barang;
 
 class BarangController extends Controller
 {
     public function barang(){
-        return view('layouts.Barang',['barangs' => barang::barang()]);
+        return view('barang',['barangs' => Barang::barang()]);
     }
 }

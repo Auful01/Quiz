@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Pelanggan extends Model
 {
     use HasFactory;
+
     public static function pelanggan()
  {
-     return Pelanggan::where('nama_pelanggan', false)
+        $pelanggan = Pelanggan::where('nama_pelanggan', false)
          ->orderBy('alamat')
          ->paginate(10);
+        return $pelanggan;
  }
 }

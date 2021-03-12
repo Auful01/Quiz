@@ -78,4 +78,5 @@ class BarangSeeder extends Seeder
             'total' => 65400
         ]]);
         }
-    }
+
+}

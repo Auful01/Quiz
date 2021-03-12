@@ -76,5 +76,5 @@ class PelangganSeeder extends Seeder
 
         ]]);
     }
-}
 
+}

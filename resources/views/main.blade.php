@@ -12,12 +12,13 @@
 
 </head>
 <body>
+<div class="container-fluid">
     @include('layouts.nav')
-    <div class="container">
+    {{-- <div class="container-fluid"> --}}
         @yield('content')
     </div>
 
-    {{-- @include('layouts.footer') --}}
+    @include('layouts.footer')
 
 
     <script src={{ asset('/js/jquery-1.11.3.min.js') }}></script>             <!-- jQuery (https://jquery.com/download/) -->
