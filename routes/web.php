@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PostController::class, 'index']);
-Route::get('posts/{slug}', [PostController::class, 'show'])
-    ->name('posts.show');
+Route::get('posts/{slug}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/fat', [PostController::class, 'index']);
+Route::get ( '/barang' , [ BarangController::class, 'barang' ])->name('index.barang');
+Route::get ( '/pelanggan' , [ PelangganController::class, 'pelanggan' ])->name('index.pelanggan');
